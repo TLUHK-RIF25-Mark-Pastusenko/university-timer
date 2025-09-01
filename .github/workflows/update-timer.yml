@@ -2,7 +2,7 @@ name: Update University Timer
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Обновление каждые 5 минут
+    - cron: '*/5 * * * *'  # update every 5 min
   workflow_dispatch:
   push:
     branches: [ main ]
