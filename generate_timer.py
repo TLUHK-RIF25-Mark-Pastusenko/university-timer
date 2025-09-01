@@ -7,7 +7,7 @@ import os
 os.makedirs('generated', exist_ok=True)
 
 # Укажите дату начала обучения (измените на свою)
-start_date = datetime(2025, 9, 1)  # Год, месяц, день
+start_date = datetime(2025, 8, 28)  # Год, месяц, день
 now = datetime.now()
 diff = now - start_date
 
