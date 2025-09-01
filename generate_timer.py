@@ -3,35 +3,35 @@
 from datetime import datetime
 import os
 
-# Создаем папку generated если её нет
+# create folder
 os.makedirs('generated', exist_ok=True)
 
-# Укажите дату начала обучения (измените на свою)
+# setup timer start date
 start_date = datetime(2025, 8, 28)  # Год, месяц, день
 now = datetime.now()
 diff = now - start_date
 
-# Вычисляем время
+# calculate time
 seconds = diff.total_seconds()
 minutes = seconds // 60
 hours = minutes // 60
 days = hours // 24
 years = days // 365.25
 
-# Остатки после вычисления полных единиц
+# remains after coma
 remaining_days = days % 365.25
 remaining_hours = hours % 24
 remaining_minutes = minutes % 60
 remaining_seconds = seconds % 60
 
-# Форматируем значения
+# time format
 years_str = f"{int(years)}"
 days_str = f"{int(remaining_days)}"
 hours_str = f"{int(remaining_hours):02d}"
 minutes_str = f"{int(remaining_minutes):02d}"
 seconds_str = f"{int(remaining_seconds):02d}"
 
-# Создаем SVG
+# Сcreate SVG
 svg_content = f'''
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="180" viewBox="0 0 400 180">
   <style>
@@ -78,6 +78,6 @@ svg_content = f'''
 </svg>
 '''
 
-# Сохраняем SVG
+# save SVG
 with open('generated/university_timer.svg', 'w') as f:
     f.write(svg_content)
