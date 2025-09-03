@@ -7,7 +7,7 @@ import os
 os.makedirs('generated', exist_ok=True)
 
 # setup timer start date
-start_date = datetime(2025, 8, 28)  # Год, месяц, день
+start_date = datetime(2025, 8, 28)  # Year, Month, Day
 now = datetime.now()
 diff = now - start_date
 
